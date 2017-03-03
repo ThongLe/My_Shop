@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
                         uniqueness: { case_sensitive: false }
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }
+    
+    def info
+        "#{name} <#{email}>"
+    end
 end

@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Member:
+  = @transaction.member_id
+%p
+  %strong Cost:
+  = @transaction.cost
+%p
+  %strong Paid cost:
+  = @transaction.paid_cost
+= link_to 'Edit', edit_transaction_path(@transaction)
+|
+= link_to 'Back', transactions_path

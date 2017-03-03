@@ -1,0 +1,13 @@
+%body
+  %header.navbar.navbar-fixed-top.navbar-inverse
+    .container
+      = link_to "sample app", '/', id: "logo"
+      %nav
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Home",   '/'
+          %li= link_to "Members",   '/members'
+          %li= link_to "Stores", '/stores'
+          %li= link_to "Transactions", '/transactions'
+          %li= link_to "Invoices", '/invoices'
+          %li= link_to "Reports", '/report'
+          %li= link_to "Logout", '#'

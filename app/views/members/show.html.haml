@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @member.name
+%p
+  %strong Year of birth:
+  = @member.year_of_birth
+%p
+  %strong Status:
+  = @member.status_id
+= link_to 'Edit', edit_member_path(@member)
+|
+= link_to 'Back', members_path

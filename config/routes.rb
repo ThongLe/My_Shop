@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
-  root 'application#hello'
-  get 'users/new'
+  root 'static_pages#home'
+  
+  # get 'users/show/:id' => 'users#show'
+  get '/signup',  to: 'users#new'
+  get '/send', to: 'application#send_simple_message'
+
+  get '/report', to: 'static_pages#report'
 
   resources :stores
   resources :transactions
   resources :invoices
   resources :statuses
   resources :members
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

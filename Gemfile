@@ -49,3 +49,12 @@ end
 group :production do
   gem 'pg', '0.18.4'
 end
+
+
+gem 'rest-client'
+
+gem "chartkick"
+gem "haml-rails"
+
+## Gemfile for Rails 3+, Sinatra, and Merb
+gem 'will_paginate', '~> 3.1.0'
