@@ -4,5 +4,5 @@ class Member < ActiveRecord::Base
     
     validates :name, presence: true
     validates :year_of_birth, presence: true
-    validates :status_id, presence: true, uniqueness: true
+    validates :status_id, presence: true
 end
