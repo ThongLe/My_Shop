@@ -5,4 +5,9 @@ class Member < ActiveRecord::Base
     validates :name, presence: true
     validates :year_of_birth, presence: true
     validates :status_id, presence: true
+    validates :phone, presence: true
+    
+    def state
+        self.status.status
+    end
 end

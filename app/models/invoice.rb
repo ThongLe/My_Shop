@@ -3,4 +3,11 @@ class Invoice < ActiveRecord::Base
     
     validates :store_id, presence: true
     validates :cost, presence: true
+    
+    def store_name
+       self.store.name 
+    end
+    def store_phone
+       self.store.phone 
+    end
 end

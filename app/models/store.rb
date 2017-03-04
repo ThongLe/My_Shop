@@ -3,4 +3,8 @@ class Store < ActiveRecord::Base
     has_many :invoices
     
     validates :status_id, presence: true, uniqueness: true
+    
+    def state
+        self.status.status
+    end
 end

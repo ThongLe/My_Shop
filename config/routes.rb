@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'report/run'
+
   root 'static_pages#home'
   
   # get 'users/show/:id' => 'users#show'

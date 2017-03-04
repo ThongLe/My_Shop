@@ -4,15 +4,21 @@
   %thead
     %tr
       %th Member
+      %th Phone
       %th Cost
       %th Paid cost
+      %th Created Time
+      %th Updated Time
       %th{:colspan => "3"}
   %tbody
     - @transactions.each do |transaction|
       %tr
-        %td= transaction.member_id
+        %td= transaction.member_name
+        %td= transaction.member_phone
         %td= transaction.cost
         %td= transaction.paid_cost
+        %td= transaction.created_at
+        %td= transaction.updated_at
         %td= link_to 'Show', transaction
         %td= link_to 'Edit', edit_transaction_path(transaction)
         %td= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' }
